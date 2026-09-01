@@ -1,0 +1,18 @@
+[package]
+name = "microgpt_infer"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[[bin]]
+name = "microgpt_infer"
+path = "src/main.rs"
+
+# No dependencies on purpose: the benchmark compares the same algorithm written three
+# times, so pulling in a crate for RNG, hashing or JSON would compare libraries instead.
+
+[profile.release]
+opt-level = 3
+# Deliberately NOT enabling anything that would change floating-point semantics.
+# Rust never reassociates FP or auto-fuses into FMA, so plain --release already
+# satisfies BENCHMARK.md section 3.

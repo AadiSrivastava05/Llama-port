@@ -1,0 +1,73 @@
+{
+  "n_layer": 1,
+  "n_embd": 16,
+  "block_size": 16,
+  "n_head": 4,
+  "head_dim": 4,
+  "vocab_size": 27,
+  "bos_token_id": 26,
+  "uchars": "abcdefghijklmnopqrstuvwxyz",
+  "num_params": 4192,
+  "train_steps": 1000,
+  "trainer": "tools/train_export.py (pure-python autograd, microgpt.py faithful)",
+  "format": "microgpt-bin-v1",
+  "dtype": "float64",
+  "byte_order": "little",
+  "payload_offset": 64,
+  "tensor_order": [
+    "wte",
+    "wpe",
+    "lm_head",
+    "layer0.attn_wq",
+    "layer0.attn_wk",
+    "layer0.attn_wv",
+    "layer0.attn_wo",
+    "layer0.mlp_fc1",
+    "layer0.mlp_fc2"
+  ],
+  "tensor_shapes": {
+    "wte": [
+      27,
+      16
+    ],
+    "wpe": [
+      16,
+      16
+    ],
+    "lm_head": [
+      27,
+      16
+    ],
+    "layer0.attn_wq": [
+      16,
+      16
+    ],
+    "layer0.attn_wk": [
+      16,
+      16
+    ],
+    "layer0.attn_wv": [
+      16,
+      16
+    ],
+    "layer0.attn_wo": [
+      16,
+      16
+    ],
+    "layer0.mlp_fc1": [
+      64,
+      16
+    ],
+    "layer0.mlp_fc2": [
+      16,
+      64
+    ]
+  },
+  "num_weights": 4192,
+  "weights_sum": 10.621326738609703,
+  "weights_abs_sum": 516.1316394186422,
+  "steps_done": 1000,
+  "recent_train_loss": 2.323306465224491,
+  "sha256": "9bf6ac8636d6b4b4a24eededaca631086d617793f287e7e803437a5b2f7009b8",
+  "bytes": 33600
+}
